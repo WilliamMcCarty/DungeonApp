@@ -11,9 +11,9 @@ namespace DungeonLibrary
         public static void GameOver()
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Thank you for playing FAST FOOD OF DOOM!");
+            Console.WriteLine("Thank you for playing DUNGEON OF SECRETS!");
             Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine("****GAME OVER****");
-        }
-    }
-}
+        }//end GameOver()
+    }//end Class GameEnd
+}//end NameSpace
