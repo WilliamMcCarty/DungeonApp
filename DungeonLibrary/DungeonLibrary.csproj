@@ -46,6 +46,7 @@
     <Compile Include="Battles.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="Combat.cs" />
+    <Compile Include="Dunlendings.cs" />
     <Compile Include="GameEnd.cs" />
     <Compile Include="GameEntry.cs" />
     <Compile Include="Monster.cs" />
