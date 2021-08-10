@@ -8,11 +8,11 @@ namespace DungeonLibrary
 {
     public enum PlayerCharacter
     {
-        Manager,
-        Cook,
-        Counter,
-        Lobby,
-        DriveThru,
-        Cleaner
-    }
-}
+        Human,
+        Elf,
+        Dwarf,
+        Goblin,
+        Wizard,
+        Hobbit
+    }//end Class PlayerCharacter
+}//end NameSpace
