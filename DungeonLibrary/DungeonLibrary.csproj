@@ -52,6 +52,7 @@
     <Compile Include="Orcs.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PlayerCharacter.cs" />
+    <Compile Include="PlayersSelectMenu.cs" />
     <Compile Include="Start.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Troll.cs" />
