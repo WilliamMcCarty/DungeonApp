@@ -58,6 +58,7 @@
     <Compile Include="Troll.cs" />
     <Compile Include="Urukhai.cs" />
     <Compile Include="Weapon.cs" />
+    <Compile Include="WeaponMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
