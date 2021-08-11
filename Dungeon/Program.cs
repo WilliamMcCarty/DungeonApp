@@ -117,9 +117,9 @@ namespace Dungeon
 
             //Weapons
             Weapon sword = new Weapon(2, 8, "Broad Sword", 8, true);
-            Weapon axe = new Weapon(3, 6, "Battle Axe", 10, true);
-            Weapon mace = new Weapon(1, 10, "Bludgeoning Mace", 15, false);
-            Weapon bowarrow = new Weapon(1, 7, "Bow and Arrow", 11, true);
+            Weapon axe = new Weapon(3, 6, "Battle Axe", 4, true);
+            Weapon mace = new Weapon(1, 7, "Bludgeoning Mace", 6, false);
+            Weapon bowarrow = new Weapon(1, 3, "Bow and Arrow", 3, true);
 
             //Choose Weapon
             Console.ForegroundColor = ConsoleColor.Red;
