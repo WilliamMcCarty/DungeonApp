@@ -17,18 +17,24 @@ namespace Dungeon
             bool characterMenu = true;
             PlayerCharacter playerCharacter = PlayerCharacter.Human;
 
+            Console.SetWindowSize(110, 45);
+
             GameEntry.GameStart();
             Console.ResetColor();
+
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write(GameBanner.GetGameBanner() + "\n\n");            
 
             //Players Name
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Enter your characters name: ");
-            characterName = Console.ReadLine();
+            characterName = Console.ReadLine().ToUpper();
             Console.Clear();
 
             //Select Character
             do
             {
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
                 PlayerMenu.PlayerSelectMenu();
                 ConsoleKey characterChoice = Console.ReadKey().Key;
                 Console.Clear();
@@ -72,14 +78,42 @@ namespace Dungeon
                         break;
 
                     default:
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine($"{characterChoice} was not a valid option.  Please choose again.");
+                        Console.ForegroundColor = ConsoleColor.Green;
                         break;
                 }
             } while (characterMenu);
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"Welcome, {characterName} the {playerCharacter}!\n\nYour battle now begins...");
-            System.Threading.Thread.Sleep(2500);
+            if (playerCharacter.ToString() == "Hobbit")
+            {
+                Console.WriteLine(Hobbit.GetHobbit() + "\n\n");
+            }
+            if (playerCharacter.ToString() == "Wizard")
+            {
+                Console.WriteLine(Wizard.GetWizard() + "\n\n");
+            }
+            if (playerCharacter.ToString() == "Goblin")
+            {
+                Console.WriteLine(Goblin.GetGoblin() + "\n\n");
+            }
+            if (playerCharacter.ToString() == "Dwarf")
+            {
+                Console.WriteLine(Dwarf.GetDwarf() + "\n\n");
+            }
+            if (playerCharacter.ToString() == "Elf")
+            {
+                Console.WriteLine(Elf.GetElf() + "\n\n");
+            }
+            if (playerCharacter.ToString() == "Human")
+            {
+                Console.WriteLine(Human.GetHuman() + "\n\n");
+            }
+            System.Threading.Thread.Sleep(4500);
+
+            Console.Clear();
 
             //Weapons
             Weapon sword = new Weapon(2, 8, "Broad Sword", 8, true);
@@ -88,8 +122,12 @@ namespace Dungeon
             Weapon bowarrow = new Weapon(1, 7, "Bow and Arrow", 11, true);
 
             //Choose Weapon
-            Console.WriteLine("As you forge forward into the night, something catch's your attention ahead...\n\n");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("As you forge forward into the night, something catch's your attention ahead...\n");
             System.Threading.Thread.Sleep(4000);
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write(Mountain.GetMountain() + "\n\n\n");
 
             bool chosen = false;
             Weapon userWeapon = new Weapon();
@@ -99,6 +137,7 @@ namespace Dungeon
                 WeaponMenu.Weapons();
                 ConsoleKey weaponChoice = Console.ReadKey(true).Key;
                 Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Blue;
 
                 switch (weaponChoice)
                 {
@@ -139,7 +178,7 @@ namespace Dungeon
             bool exit = false;
             do
             {
-                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(Battles.GetBattle());
                 Console.ResetColor();
                 Console.WriteLine("Press any key to continue.\n");
@@ -167,6 +206,7 @@ namespace Dungeon
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.Write("### Please Choose an Action ###\n\n");
                     Console.ResetColor();
+                    Console.ForegroundColor = ConsoleColor.Blue;
                     Console.Write(
                         "[A] Atack\n" +
                         "[R] Run Away\n" +
@@ -183,7 +223,7 @@ namespace Dungeon
                     {
                         case ConsoleKey.A:
                         case ConsoleKey.Enter:
-                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
                             Console.WriteLine("### Attack ###\n");
                             Console.ResetColor();
                             Combat.DoBattle(player, monster);
@@ -192,7 +232,11 @@ namespace Dungeon
                                 Console.ForegroundColor = ConsoleColor.Green;
                                 Console.WriteLine("You defeated {0}!!\n\n", monster.Name);
                                 Console.ResetColor();
-
+                                Console.ForegroundColor = ConsoleColor.Magenta;
+                                Console.WriteLine("The Princess Is Saved...");
+                                Console.WriteLine(Princess.GetPrincess());
+                                Console.ResetColor();
+                                
                                 //Found beeps on internet console beep sounds
                                 Console.Beep(987, 53);
                                 Thread.Sleep(53);

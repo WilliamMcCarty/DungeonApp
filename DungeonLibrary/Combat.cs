@@ -27,6 +27,7 @@ namespace DungeonLibrary
             }
             else
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("{0} missed!\n",
                     attacker.Name);
             }

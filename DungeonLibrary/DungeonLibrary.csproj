@@ -47,19 +47,28 @@
     <Compile Include="Character.cs" />
     <Compile Include="Combat.cs" />
     <Compile Include="Dunlendings.cs" />
+    <Compile Include="Dwarf.cs" />
+    <Compile Include="Elf.cs" />
+    <Compile Include="GameBanner.cs" />
     <Compile Include="GameEnd.cs" />
     <Compile Include="GameEntry.cs" />
+    <Compile Include="Goblin.cs" />
+    <Compile Include="Hobbit.cs" />
+    <Compile Include="Human.cs" />
     <Compile Include="Monster.cs" />
+    <Compile Include="Mountain.cs" />
     <Compile Include="Orcs.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PlayerCharacter.cs" />
     <Compile Include="PlayersSelectMenu.cs" />
+    <Compile Include="Princess.cs" />
     <Compile Include="Start.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Troll.cs" />
     <Compile Include="Urukhai.cs" />
     <Compile Include="Weapon.cs" />
     <Compile Include="WeaponMenu.cs" />
+    <Compile Include="Wizard.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

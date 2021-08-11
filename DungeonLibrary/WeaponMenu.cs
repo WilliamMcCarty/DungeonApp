@@ -13,6 +13,7 @@ namespace DungeonLibrary
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("### Choose Your Weapon ###\n");
             Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine(
                 "[S] Sword       - It still looks sharp, but might require both hands to wield.\n" +
                 "[A] Axe         - This might do some damage, it will definitely require both hands to swing.\n" +

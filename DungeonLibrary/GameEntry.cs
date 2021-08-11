@@ -29,11 +29,10 @@ namespace DungeonLibrary
                 Console.Clear();
             }
             Console.Beep(1500, 500);
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine(GameTitle);
             Console.WriteLine("\n");
             Console.ResetColor();
-            Console.ForegroundColor = ConsoleColor.DarkYellow;
         }//end GameStart()
     }//end Class GameEntry
 }//end NameSpace
